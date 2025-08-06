@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+ overflow-x: hidden !important;
+}
+.header {
+  background-color: #007a3f;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.nav-link {
+  margin: 0 10px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.menu-btn {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .menu-btn {
+    display: inline-block;
+  }
+  .navbar-collapse {
+    display: none !important;
+  }
+}
+
+.hero {
+  background-color: #fffecb;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+}
+
+.hero-subtitle {
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.hero-para {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.profile-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-bg {
+  background-color: #006837;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.profile-img {
+  position: relative;
+  z-index: 2;
+  max-width: 580px;
+}
+
+.minimalist-section {
+  background-color: #007a3f;
+  color: #fffecb;
+}
+
+.phone-frame video {
+  border: 8px solid #fffecb;
+  border-radius: 20px;
+  max-width: 280px;
+  height: auto;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.section-desc {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+

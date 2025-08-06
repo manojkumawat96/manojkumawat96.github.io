@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fofana Header</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Offcanvas Menu -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Menu</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Project</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Testimonial</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+    </ul>
+  </div>
+</div>
+
+<main class="container-fluid p-0">
+  <header class="row header">
+    <nav class="navbar navbar-expand-lg py-3 w-100">
+      <div class="container">
+        <a class="navbar-brand text-white" href="#">Fofana<span>.</span></a>
+
+        <!-- Mobile Menu Button -->
+        <button class="btn menu-btn text-white border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </button>
+
+        <!-- Desktop Menu -->
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto d-none d-lg-flex">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Project</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Testimonial</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class=" hero ">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 class="hero-title">hello,</h1>
+          <h2 class="hero-subtitle">i am manish</h2>
+          <p class="hero-para">
+            An editor whose passion is editing, over the past 2 years<br>
+            I have helped many big content creators make their content<br>
+            engaging and reachable
+          </p>
+        </div>
+        <div class="col-md-6 text-center">
+          <div class="profile-wrapper">
+            <div class="profile-bg"></div>
+            <img src="assets/img/manish.png" alt="Manish" class="profile-img img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="minimalist-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Video / Mobile Frame -->
+      <div class="col-md-5 text-center mb-4 mb-md-0">
+        <div class="phone-frame">
+          <video class="w-100 rounded-4" controls>
+            <source src="assets/video/sample.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <!-- Text Content -->
+      <div class="col-md-7">
+        <h2 class="section-title">Minimalist edit</h2>
+        <p class="section-desc">
+          <em>This editing style focuses on simplicity, clarity, and elegance. Instead of overwhelming visuals, I use clean transitions, subtle animations, and carefully chosen typography to keep the viewer’s attention where it matters most — on the message.</em>
+          <br><br>
+          <em>Minimalist edits are ideal for brands and creators who want a modern, premium look without unnecessary clutter. Every frame is designed with intention, allowing the content to breathe and speak for itself.</em>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
