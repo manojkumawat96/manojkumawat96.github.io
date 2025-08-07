@@ -6,12 +6,136 @@
   <title>Fofana Header</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      overflow-x: hidden;
+    }
+    .header {
+      background-color: #007a3f;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 30px;
+      color: #fff;
+    }
+    .navbar-nav .nav-link {
+      margin: 0 10px;
+      font-weight: 500;
+      color: #fff !important;
+    }
+    .menu-btn {
+      display: none;
+    }
+    @media (max-width: 991px) {
+      .menu-btn {
+        display: inline-block;
+      }
+      .navbar-collapse {
+        display: none !important;
+      }
+    }
+    .hero {
+      background-color: #fffecb;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+     
+    }
+    .hero-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 60px;
+    }
+    .hero-subtitle {
+      font-family: 'Dancing Script', cursive;
+      font-size: 40px;
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+    .hero-para {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    .profile-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    .profile-bg {
+      background-color: #006837;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+    .profile-img {
+      position: relative;
+      z-index: 2;
+      max-width: 100%;
+    }
+    .minimalist-section {
+      background-color: #007a3f;
+      color: #fffecb;
+    }
+    .phone-frame video {
+      border: 8px solid #fffecb;
+      border-radius: 20px;
+      max-width: 250px;
+    }
+    /* Mobile screens पर width बढ़ा दें */
+@media (max-width: 575.98px) {
+  .profile-img {
+    max-width: 100%;
+  }
+}
+    .section-title {
+      font-weight: bold;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    .section-desc {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .contact-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.contact-buttons .btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  </style>
 </head>
 <body>
 
 <!-- Offcanvas Menu -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+<div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasMenu">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title">Menu</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -29,21 +153,18 @@
 </div>
 
 <main class="container-fluid p-0">
-  <header class="row header">
+  <header class="header">
     <nav class="navbar navbar-expand-lg py-3 w-100">
       <div class="container">
-        <a class="navbar-brand text-white" href="#">Fofana<span>.</span></a>
-
-        <!-- Mobile Menu Button -->
-        <button class="btn menu-btn text-white border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+        <a class="navbar-brand" href="#">Fofana<span>.</span></a>
+        <button class="btn menu-btn text-white border-0 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 12.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5z"/>
           </svg>
         </button>
 
-        <!-- Desktop Menu -->
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto d-none d-lg-flex">
+        <div class="collapse navbar-collapse d-none d-lg-block">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Project</a></li>
@@ -57,19 +178,19 @@
   </header>
 
   <!-- Hero Section -->
-  <section class=" hero ">
+  <section class="hero">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-6">
+        <div class="col-lg-6 text-center text-lg-start">
           <h1 class="hero-title">hello,</h1>
           <h2 class="hero-subtitle">i am manish</h2>
           <p class="hero-para">
-            An editor whose passion is editing, over the past 2 years<br>
+            An editor whose passion is editing. Over the past 2 years,<br>
             I have helped many big content creators make their content<br>
-            engaging and reachable
+            engaging and reachable.
           </p>
         </div>
-        <div class="col-md-6 text-center">
+        <div class="col-lg-6 text-center">
           <div class="profile-wrapper">
             <div class="profile-bg"></div>
             <img src="assets/img/manish.png" alt="Manish" class="profile-img img-fluid">
@@ -78,36 +199,204 @@
       </div>
     </div>
   </section>
+
+  <!-- Minimalist Section -->
   <section class="minimalist-section py-5">
-  <div class="container">
-    <div class="row align-items-center">
-      
-      <!-- Video / Mobile Frame -->
-      <div class="col-md-5 text-center mb-4 mb-md-0">
-        <div class="phone-frame">
-          <video class="w-100 rounded-4" controls>
-            <source src="assets/video/sample.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="phone-frame text-center text-md-start">
+            <video class="w-100 rounded-4" controls>
+              <source src="assets/video/docunmentry style 1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <h2 class="section-title">Minimalist edit</h2>
+          <p class="section-desc">
+            <em>This editing style focuses on simplicity, clarity, and elegance. Instead of overwhelming visuals, I use clean transitions, subtle animations, and carefully chosen typography to keep the viewer’s attention where it matters most — on the message.</em>
+            <br><br>
+            <em>Minimalist edits are ideal for brands and creators who want a modern, premium look without unnecessary clutter. Every frame is designed with intention, allowing the content to breathe and speak for itself.</em>
+          </p>
         </div>
       </div>
-
-      <!-- Text Content -->
-      <div class="col-md-7">
-        <h2 class="section-title">Minimalist edit</h2>
-        <p class="section-desc">
-          <em>This editing style focuses on simplicity, clarity, and elegance. Instead of overwhelming visuals, I use clean transitions, subtle animations, and carefully chosen typography to keep the viewer’s attention where it matters most — on the message.</em>
-          <br><br>
-          <em>Minimalist edits are ideal for brands and creators who want a modern, premium look without unnecessary clutter. Every frame is designed with intention, allowing the content to breathe and speak for itself.</em>
-        </p>
+    </div>
+  </section>
+  <!-- Services Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-4" style="color:#007a3f;">Services</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <i class="bi bi-play-circle-fill display-4 text-success mb-3"></i>
+        <h4>Reels Editing</h4>
+        <p>High-engagement short videos for Instagram & YouTube Shorts.</p>
       </div>
-
+      <div class="col-md-4 mb-4">
+        <i class="bi bi-youtube display-4 text-danger mb-3"></i>
+        <h4>YouTube Video</h4>
+        <p>Full-length edits with pacing, storytelling, and effects.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="bi bi-palette-fill display-4 text-warning mb-3"></i>
+        <h4>Color Grading</h4>
+        <p>Give your raw footage a cinematic and premium look.</p>
+      </div>
     </div>
   </div>
 </section>
 
+
+<!-- Projects Section -->
+<section class="py-5 minimalist-section">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">My Projects</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <video class="w-100 rounded-4" controls>
+          <source src="assets/video/short1.mp4" type="video/mp4">
+        </video>
+        <p class="mt-2">Motivational Instagram Reel</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <video class="w-100 rounded-4" controls>
+          <source src="assets/video/short2.mp4" type="video/mp4">
+        </video>
+        <p class="mt-2">Travel Vlog Edit</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <video class="w-100 rounded-4" controls>
+          <source src="assets/video/short3.mp4" type="video/mp4">
+        </video>
+        <p class="mt-2">Ad Commercial</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-4" style="color:#007a3f;">Pricing</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <h4>Basic</h4>
+        <p>₹500 / Reel</p>
+        <p>Clean cuts + Audio sync</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h4>Standard</h4>
+        <p>₹1000 / Video</p>
+        <p>Transitions + Color Grade + SFX</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h4>Premium</h4>
+        <p>₹2000+</p>
+        <p>Full storytelling + VFX + Thumbnail</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial Section -->
+<!-- Testimonial Slider -->
+<section class="py-5 minimalist-section">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Testimonials</h2>
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner text-center">
+        <div class="carousel-item active">
+          <blockquote class="blockquote">
+            <p class="mb-4 fs-5">"Manish has been a game changer for my content. Fast, creative, and reliable."</p>
+            <footer class="blockquote-footer text-white">– Rahul Vlogger</footer>
+          </blockquote>
+        </div>
+        <div class="carousel-item">
+          <blockquote class="blockquote">
+            <p class="mb-4 fs-5">"I trust Manish with all my YouTube edits. He understands what viewers want!"</p>
+            <footer class="blockquote-footer text-white">– Simran D.</footer>
+          </blockquote>
+        </div>
+        <div class="carousel-item">
+          <blockquote class="blockquote">
+            <p class="mb-4 fs-5">"Great sense of timing and storytelling. Highly recommend for cinematic edits!"</p>
+            <footer class="blockquote-footer text-white">– Karan Films</footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Info Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-4" style="color:#007a3f;">Contact Me</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <p class="mb-3 fs-5">
+          <i class="bi bi-telephone-fill text-success me-2"></i>
+          <strong>+91 9876543210</strong>
+        </p>
+        <p class="mb-3 fs-5">
+          <i class="bi bi-envelope-fill text-danger me-2"></i>
+          <strong>manish.editor@gmail.com</strong>
+        </p>
+        <p class="mb-3 fs-5">
+          <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+          <strong>Bagru, Jaipur, Rajasthan</strong>
+        </p>
+
+        <div class="mt-4">
+          <a href="https://instagram.com/yourhandle" target="_blank" class="text-dark fs-3 me-3">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://youtube.com/@yourchannel" target="_blank" class="text-dark fs-3 me-3">
+            <i class="bi bi-youtube"></i>
+          </a>
+          <a href="https://facebook.com/yourhandle" target="_blank" class="text-dark fs-3">
+            <i class="bi bi-facebook"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="py-3 text-center minimalist-section">
+  <p class="mb-0">© 2025 Manish | Video Editor | Built with ❤️ by Manoj</p>
+</footer>
+<!-- Fixed WhatsApp & Email Buttons -->
+<div class="contact-buttons">
+  <a href="https://wa.me/919999999999" target="_blank" class="btn btn-success shadow">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <a href="mailto:youremail@example.com" class="btn btn-danger shadow">
+    <i class="bi bi-envelope-fill"></i>
+  </a>
+</div>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const myCarousel = document.querySelector('#testimonialCarousel');
+  const carousel = new bootstrap.Carousel(myCarousel, {
+    interval: 4000, // 4 seconds per slide
+    ride: 'carousel'
+  });
+</script>
 </body>
 </html>
